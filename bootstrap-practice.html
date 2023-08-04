@@ -16,10 +16,33 @@
 
         body {
             margin: 0;
+            height: auto;
+            background-color: #fafbfe;
+
         }
 
         .content-page {
             min-height: calc(100vh - 100px);
+            margin-bottom: 200px;
+            background-color: #fafbfe;
+        }
+
+        .top-title {
+            width: 80%;
+            height: 70px;
+        }
+
+        .top-title img {
+            margin-top: 26px;
+        }
+
+        #logo {
+            width: 30px;
+            height: 30px;
+            background-image: url(./img/logo.jpg);
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
         }
 
         .line {
@@ -33,18 +56,19 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background-color: black;
-            border: 5px solid white;
+            border: 5px solid #fafbfe;
             position: absolute;
             top: -10px;
             /* left: -10px; */
+            background-color: #727cf5;
         }
 
         .point-1::after {
+            width: 150px;
             content: 'Order Placed';
             position: absolute;
             top: 20px;
-            left: -20px;
+            left: -100px;
             text-align: end;
         }
 
@@ -74,9 +98,9 @@
         .point-2 {
             width: 20px;
             height: 20px;
+            background-color: #727cf5;
             border-radius: 50%;
-            background-color: black;
-            border: 5px solid white;
+            border: 5px solid #fafbfe;
             position: absolute;
             top: -10px;
             left: 31.5%;
@@ -85,9 +109,9 @@
         .point-3 {
             width: 20px;
             height: 20px;
+            background-color: #727cf5;
             border-radius: 50%;
-            background-color: black;
-            border: 5px solid white;
+            border: 5px solid #fafbfe;
             position: absolute;
             top: -10px;
             right: 31.5%;
@@ -96,12 +120,37 @@
         .point-4 {
             width: 20px;
             height: 20px;
+            background-color: #0acf97;
             border-radius: 50%;
-            background-color: black;
-            border: 5px solid white;
+            border: 5px solid #fafbfe;
             position: absolute;
             top: -10px;
             right: 0px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+            color: #6c757d;
+        }
+
+        .table> :not(caption)>*>* {
+            padding: 0.95rem 0.95rem;
+        }
+
+        .table {
+            color: #6c757d;
+        }
+
+        nav {
+            height: 70px;
+            box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+
+        }
+
+        #search {
+            background-color: #727cf5;
+            color: #f8f8fe;
         }
 
         #progress {
@@ -111,10 +160,60 @@
             align-items: center;
         }
 
+        .side-nav {
+            list-style: none;
+            color: #8391a2;
+        }
+
         footer {
             width: 100%;
             height: 60px;
             border-top: 1px solid #dee2e6;
+            font-size: 14.4px;
+            color: #90979e;
+        }
+
+        .breadcrumb-item a {
+            text-decoration: none;
+        }
+
+        #menuL {
+            width: 260px;
+            background-color: #313a46;
+        }
+
+        #mainPage {
+            width: calc(100% - 260px);
+        }
+
+        @media (max-width:1140px) {
+            #menuL {
+                width: 70px;
+            }
+
+            #mainPage {
+                width: calc(100% - 70px);
+            }
+        }
+
+        @media (max-width:991px) {
+            .line {
+                width: 90%;
+            }
+        }
+
+        @media (max-width:768px) {
+            #menuL {
+                display: none;
+            }
+
+            #mainPage {
+                width: 100%;
+            }
+
+            .breadcrumb {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -122,14 +221,26 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 bg-dark min-vh-100"></div>
-            <div class="col-11 p-0 position-relative">
-                <nav class="navbar navbar-light  bg-light p-0">
+            <div class="min-vh-100" id="menuL">
+                <div class="top-title fw-bolder text-center m-auto sticky-top"><img src="./img/menu-title.png"
+                        width="103.7" height="22" alt=""></div>
+                <ul class="side-nav">
+                    <li class="side-nav-title">NAVIGATION</li>
+                </ul>
+            </div>
+            <div class="p-0 position-relative" id="mainPage">
+                <nav class="navbar navbar-light  bg-white p-0 sticky-top">
                     <div class="container-fluid">
-                        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <div class="navL d-flex ">
+                            <button class="navbar-toggler p-0 border-0 me-4" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <form class="d-lg-flex d-none">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn" type="submit" id="search">Search</button>
+                            </form>
+                        </div>
                         <div class="cotainer d-flex justify-content-between">
                             <a class="navbar-brand ms-3" href="#">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -141,10 +252,10 @@
                                 <i class="bi bi-bell"></i>
                             </a>
                             <a class="navbar-brand ms-3 " href="#">
-                                <img src="./img/logo.jpg" alt="" width="20" height="16">
+                                <div id="logo"></div>
                             </a>
                         </div>
-                        <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar"
+                        <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvasNavbar"
                             aria-labelledby="offcanvasNavbarLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
@@ -175,7 +286,7 @@
                                     </li>
                                 </ul>
                                 <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                    <input class="form-control me-2" type="search" placeholder="Search..."
                                         aria-label="Search">
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
@@ -183,34 +294,35 @@
                         </div>
                     </div>
                 </nav>
-                <div class="content-page  p-3">
+                <div class="content-page  p-4">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 ">
                                 <div class="page-title-box d-flex flex-row-reverse justify-content-between">
                                     <div class="page-title-right ">
-                                        <ol class="breadcrumb m-0 d-flex justify-content-end">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">eCommerce</a>
-                                            </li>
-                                            <li class="breadcrumb-item active">Order Details</li>
-                                        </ol>
+                                        <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                            <ol class="breadcrumb ">
+                                                <li class="breadcrumb-item"><a href="#">Hyper</a></li>
+                                                <li class="breadcrumb-item"><a href="#">eCommerce</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Order Details
+                                                </li>
+                                            </ol>
+                                        </div>
                                     </div>
-                                    <h4 class="page-title">Order Details</h4>
+                                    <h4 class="page-title mb-0">Order Details</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12" id="progress">
+                            <div class="col-12 w-100 p-0" id="progress">
                                 <div class="line">
                                     <div class="point-1">
                                     </div>
-                                    <div class="point-2"><br>
-
+                                    <div class="point-2">
                                     </div>
-                                    <div class="point-3"><br>
+                                    <div class="point-3">
                                     </div>
-                                    <div class="point-4"><br>
+                                    <div class="point-4">
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +335,7 @@
                                     <h4 class="header-title mb-3">Items from Order #12537</h4>
 
                                     <div class="table-responsive">
-                                        <table class="table mb-0">
+                                        <table class="table mb-2">
                                             <thead class="table-light">
                                                 <tr>
                                                     <th>Item</th>
@@ -347,7 +459,7 @@
                         </div>
                     </div>
                 </div>
-                <footer class="footer position-absolute bottom-0 w-100">
+                <footer class="footer position-absolute bottom-0 w-100 fw-light">
                     <div class=" w-100 p-3 d-flex justify-content-between">
                         <div class=" d-flex justify-content-start align-items-center">
                             2023 © Hyper - Coderthemes.com
@@ -364,6 +476,16 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <!-- data-bs-toggle -->
+        <!-- <nav>asdasdadsa</nav>
+        <main>
+            asdasdasd
+            <button></button>
+        </main>
+    </div> -->
+
     <script src="./js/bootstrap.bundle.js"></script>
 </body>
 
