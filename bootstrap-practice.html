@@ -16,7 +16,7 @@
 
         body {
             margin: 0;
-            height: auto;
+            height: 100vh;
             background-color: #fafbfe;
 
         }
@@ -30,6 +30,7 @@
         .top-title {
             width: 80%;
             height: 70px;
+            background-color: #313a46;
         }
 
         .top-title img {
@@ -163,7 +164,15 @@
         .side-nav {
             list-style: none;
             color: #8391a2;
+            font-size: 0.9375rem;
         }
+
+        /* .icon {
+            background-image: url(./img/home.svg);
+            background-color: #fafbfe;
+            width: 24px;
+            height: 24px;
+        } */
 
         footer {
             width: 100%;
@@ -219,262 +228,274 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="min-vh-100" id="menuL">
-                <div class="top-title fw-bolder text-center m-auto sticky-top"><img src="./img/menu-title.png"
-                        width="103.7" height="22" alt=""></div>
-                <ul class="side-nav">
-                    <li class="side-nav-title">NAVIGATION</li>
-                </ul>
+    <div class="container-fluid p-0 d-flex">
+        <div class="min-vh-100 position-relative" id="menuL">
+            <div class="top-title fw-bolder text-center w-100 sticky-top"><img src="./img/menu-title.png" width="103.7"
+                    height="22" alt=""></div>
+            <div class="side-nav w-100 position-absolute ">
+                <div class=" text-start px-3 py-2">NAVIGATION</div>
+                <div class=" text-start px-4 py-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></g></svg><span class="ms-4">Dashboards</span></div>
+                <div class=" text-start px-3 py-2">APPS</div>
+                <div class=" text-start px-4 py-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z"/></svg><span class="ms-4">Calendar</span></div>
+                <div class=" text-start px-4 py-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="white" fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v10.06l1.28-1.28l1.53-1.53H4V11a2 2 0 0 0 2 2h7l1.5 1.5L16 16V6a2 2 0 0 0-2-2h-2V2a2 2 0 0 0-2-2H2Zm8.5 4V2a.5.5 0 0 0-.5-.5H2a.5.5 0 0 0-.5.5v6.44l.47-.47l.22-.22H4V6a2 2 0 0 1 2-2h4.5Zm3.56 7.94l.44.439V6a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h7.621l.44.44Z" clip-rule="evenodd"/></svg>    <span class="ms-4">Chat</span></div>
+                <div class=" text-start px-4 py-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="white" d="m15.29 10.29l-2.78 2.78A2.09 2.09 0 0 0 12 13a2 2 0 0 0-2 2a2.09 2.09 0 0 0 .07.51l-.78.78a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l.78-.78A2.09 2.09 0 0 0 12 17a2 2 0 0 0 2-2a2.09 2.09 0 0 0-.07-.51l2.78-2.78a1 1 0 0 0-1.42-1.42ZM12 4A10 10 0 0 0 2 14a9.91 9.91 0 0 0 1.69 5.56a1 1 0 0 0 1.66-1.12a8 8 0 1 1 13.3 0a1 1 0 0 0 .27 1.39a1 1 0 0 0 .56.17a1 1 0 0 0 .83-.44A9.91 9.91 0 0 0 22 14A10 10 0 0 0 12 4Z"/></svg><span class="ms-4">CRM</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">Ecommerce</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">Email</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">Progects</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">Social Feed</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">Tasks</span></div>
+                <div class=" text-start px-4 py-3"><span class="ms-4">File Manager</span></div>
             </div>
-            <div class="p-0 position-relative" id="mainPage">
-                <nav class="navbar navbar-light  bg-white p-0 sticky-top">
-                    <div class="container-fluid">
-                        <div class="navL d-flex ">
-                            <button class="navbar-toggler p-0 border-0 me-4" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <form class="d-lg-flex d-none">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn" type="submit" id="search">Search</button>
+        </div>
+
+
+        <div class="p-0 position-relative" id="mainPage">
+            <nav class="navbar navbar-light  bg-white p-0 sticky-top">
+                <div class="container-fluid">
+                    <div class="navL d-flex ">
+                        <button class="navbar-toggler p-0 border-0 me-4" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <form class="d-lg-flex d-none">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn" type="submit" id="search">Search</button>
+                        </form>
+                    </div>
+                    <div class="cotainer d-flex justify-content-between">
+                        <a class="navbar-brand ms-3" href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a class="navbar-brand ms-3" href="#">
+                            <img src="./img/usa.jpg" alt="" width="20" height="16">
+                        </a>
+                        <a class="navbar-brand ms-3" href="#">
+                            <i class="bi bi-bell"></i>
+                        </a>
+                        <a class="navbar-brand ms-3 " href="#">
+                            <div id="logo"></div>
+                        </a>
+                    </div>
+                    <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search..."
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>
-                        <div class="cotainer d-flex justify-content-between">
-                            <a class="navbar-brand ms-3" href="#">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
-                            <a class="navbar-brand ms-3" href="#">
-                                <img src="./img/usa.jpg" alt="" width="20" height="16">
-                            </a>
-                            <a class="navbar-brand ms-3" href="#">
-                                <i class="bi bi-bell"></i>
-                            </a>
-                            <a class="navbar-brand ms-3 " href="#">
-                                <div id="logo"></div>
-                            </a>
-                        </div>
-                        <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvasNavbar"
-                            aria-labelledby="offcanvasNavbarLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Dropdown
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Search..."
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div>
-                        </div>
                     </div>
-                </nav>
-                <div class="content-page  p-4">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 ">
-                                <div class="page-title-box d-flex flex-row-reverse justify-content-between">
-                                    <div class="page-title-right ">
-                                        <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                                            <ol class="breadcrumb ">
-                                                <li class="breadcrumb-item"><a href="#">Hyper</a></li>
-                                                <li class="breadcrumb-item"><a href="#">eCommerce</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Order Details
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                    <h4 class="page-title mb-0">Order Details</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 w-100 p-0" id="progress">
-                                <div class="line">
-                                    <div class="point-1">
-                                    </div>
-                                    <div class="point-2">
-                                    </div>
-                                    <div class="point-3">
-                                    </div>
-                                    <div class="point-4">
+                </div>
+            </nav>
+            <div class="content-page  p-4 ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <div class="page-title-box d-flex flex-row-reverse justify-content-between">
+                                <div class="page-title-right ">
+                                    <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                        <ol class="breadcrumb ">
+                                            <li class="breadcrumb-item"><a href="#">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="#">eCommerce</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Order Details
+                                            </li>
+                                        </ol>
                                     </div>
                                 </div>
+                                <h4 class="page-title mb-0">Order Details</h4>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-8">
-                            <div class="card w-100 mb-4" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-3">Items from Order #12537</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table mb-2">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th>Item</th>
-                                                    <th>Quantity</th>
-                                                    <th>Price</th>
-                                                    <th>Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>The Military Duffle Bag</td>
-                                                    <td>3</td>
-                                                    <td>$128</td>
-                                                    <td>$384</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mountain Basket Ball</td>
-                                                    <td>1</td>
-                                                    <td>$199</td>
-                                                    <td>$199</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Wavex Canvas Messenger Bag</td>
-                                                    <td>5</td>
-                                                    <td>$180</td>
-                                                    <td>$900</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>The Utility Shirt</td>
-                                                    <td>2</td>
-                                                    <td>$79</td>
-                                                    <td>$158</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                        <div class="col-12 w-100 p-0" id="progress">
+                            <div class="line">
+                                <div class="point-1">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card w-100 mb-4" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-3">Order Summary</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table mb-0">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Grand Total :</td>
-                                                    <td>$1641</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shipping Charge :</td>
-                                                    <td>$23</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Estimated Tax : </td>
-                                                    <td>$19.22</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Total :</th>
-                                                    <th>$1683.22</th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="point-2">
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row h-100">
-                        <div class="col-lg-4  h-100">
-                            <div class="card w-100 mb-4" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-4">Shipping Information</h4>
-                                    <h5>Stanley Jones</h5>
-                                    <address class="mb-0 font-14 address-lg">
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890 <br>
-                                        <abbr title="Mobile">M:</abbr> (+01) 12345 67890
-                                    </address>
+                                <div class="point-3">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 h-100">
-                            <div class="card w-100 mb-4" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-4">Billing Information</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <p class="mb-2"><span class="fw-bold me-2">Payment Type:</span> Credit Card
-                                            </p>
-                                            <p class="mb-2"><span class="fw-bold me-2">Provider:</span> Visa ending in
-                                                2851</p>
-                                            <p class="mb-2"><span class="fw-bold me-2">Valid Date:</span> 02/2020</p>
-                                            <p class="mb-2"><span class="fw-bold me-2">CVV:</span> xxx</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 h-100">
-                            <div class="card w-100 mb-4">
-                                <div class="card-body">
-                                    <h4 class="header-title mb-4">Delivery Info</h4>
-                                    <div class="text-center">
-                                        <i class="mdi mdi-truck-fast h2 text-muted"></i>
-                                        <h5 class="mb-4"><b>UPS Delivery</b></h5>
-                                        <p class="mb-3"><b>Order ID :</b> xxxx235</p>
-                                        <p class="mb-3"><b>Payment Mode :</b> COD</p>
-                                    </div>
+                                <div class="point-4">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <footer class="footer position-absolute bottom-0 w-100 fw-light">
-                    <div class=" w-100 p-3 d-flex justify-content-between">
-                        <div class=" d-flex justify-content-start align-items-center">
-                            2023 © Hyper - Coderthemes.com
-                        </div>
-                        <div class="">
-                            <div class="text-md-end d-flex d-flex flex-row justify-content-end align-items-center">
-                                <div class="f-text ms-4 text-start">About</div>
-                                <div class="f-text ms-4 text-center">Support</div>
-                                <div class="f-text ms-4 text-end">Contact Us</div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card w-100 mb-4" style="width: 18rem;">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">Items from Order #12537</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table mb-2">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>The Military Duffle Bag</td>
+                                                <td>3</td>
+                                                <td>$128</td>
+                                                <td>$384</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mountain Basket Ball</td>
+                                                <td>1</td>
+                                                <td>$199</td>
+                                                <td>$199</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wavex Canvas Messenger Bag</td>
+                                                <td>5</td>
+                                                <td>$180</td>
+                                                <td>$900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>The Utility Shirt</td>
+                                                <td>2</td>
+                                                <td>$79</td>
+                                                <td>$158</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </footer>
+                    <div class="col-lg-4">
+                        <div class="card w-100 mb-4" style="width: 18rem;">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">Order Summary</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Description</th>
+                                                <th>Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Grand Total :</td>
+                                                <td>$1641</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shipping Charge :</td>
+                                                <td>$23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Estimated Tax : </td>
+                                                <td>$19.22</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total :</th>
+                                                <th>$1683.22</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-100">
+                    <div class="col-lg-4  h-100">
+                        <div class="card w-100 mb-4" style="width: 18rem;">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">Shipping Information</h4>
+                                <h5>Stanley Jones</h5>
+                                <address class="mb-0 font-14 address-lg">
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890 <br>
+                                    <abbr title="Mobile">M:</abbr> (+01) 12345 67890
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 h-100">
+                        <div class="card w-100 mb-4" style="width: 18rem;">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">Billing Information</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <p class="mb-2"><span class="fw-bold me-2">Payment Type:</span> Credit Card
+                                        </p>
+                                        <p class="mb-2"><span class="fw-bold me-2">Provider:</span> Visa ending in
+                                            2851</p>
+                                        <p class="mb-2"><span class="fw-bold me-2">Valid Date:</span> 02/2020</p>
+                                        <p class="mb-2"><span class="fw-bold me-2">CVV:</span> xxx</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 h-100">
+                        <div class="card w-100 mb-4">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">Delivery Info</h4>
+                                <div class="text-center">
+                                    <i class="mdi mdi-truck-fast h2 text-muted"></i>
+                                    <h5 class="mb-4"><b>UPS Delivery</b></h5>
+                                    <p class="mb-3"><b>Order ID :</b> xxxx235</p>
+                                    <p class="mb-3"><b>Payment Mode :</b> COD</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <footer class="footer position-absolute bottom-0 w-100 fw-light">
+                <div class=" w-100 p-3 d-flex justify-content-between">
+                    <div class=" d-flex justify-content-start align-items-center">
+                        2023 © Hyper - Coderthemes.com
+                    </div>
+                    <div class="">
+                        <div class="text-md-end d-flex d-flex flex-row justify-content-end align-items-center">
+                            <div class="f-text ms-4 text-start">About</div>
+                            <div class="f-text ms-4 text-center">Support</div>
+                            <div class="f-text ms-4 text-end">Contact Us</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
+
     </div>
 
     <div>
@@ -486,7 +507,7 @@
         </main>
     </div> -->
 
-    <script src="./js/bootstrap.bundle.js"></script>
+        <script src="./js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
